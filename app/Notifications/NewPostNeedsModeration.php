@@ -5,10 +5,9 @@ namespace App\Notifications;
 use App\Models\Post;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class NewPostNeedsModeration extends Notification implements ShouldQueue
+class NewPostNeedsModeration extends Notification
 {
     use Queueable;
 
