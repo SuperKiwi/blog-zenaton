@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Framework\Providers;
 
 use Illuminate\Routing\Router;
 use Barryvdh\Elfinder\ElfinderServiceProvider as ElfinderServiceProviderBase;
@@ -36,7 +36,7 @@ class ElfinderServiceProvider extends ElfinderServiceProviderBase
             $router->get('ckeditor', ['as' => 'elfinder.ckeditor', 'uses' => 'ElfinderController@showCKeditor4']);
         });
 
-        $router->any('elfinder/connector', 'App\Http\Controllers\Back\ElfinderController@showConnector')
+        $router->any('elfinder/connector', 'Framework\Http\Controllers\Back\ElfinderController@showConnector')
             ->name('elfinder.connector')
             ->middleware($config['middleware']);
     }

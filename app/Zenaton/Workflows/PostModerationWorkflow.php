@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Zenaton\Workflows;
+namespace Framework\Zenaton\Workflows;
 
-use App\Models\Post;
+use Framework\Models\Post;
 use Zenaton\Tasks\Wait;
 use Zenaton\Traits\Zenatonable;
-use App\Zenaton\Tasks\AcceptPostTask;
-use App\Zenaton\Tasks\RefusePostTask;
+use Framework\Zenaton\Tasks\AcceptPostTask;
+use Framework\Zenaton\Tasks\RefusePostTask;
 use Zenaton\Interfaces\WorkflowInterface;
-use App\Zenaton\Events\PostModeratedEvent;
-use App\Zenaton\Tasks\AskForModerationTask;
-use App\Zenaton\Tasks\AcceptPostDueToNoModerationTask;
+use Framework\Zenaton\Events\PostModeratedEvent;
+use Framework\Zenaton\Tasks\AskForModerationTask;
+use Framework\Zenaton\Tasks\AcceptPostDueToNoModerationTask;
 
 class PostModerationWorkflow implements WorkflowInterface
 {

@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
 use Barryvdh\Elfinder\ {
     Session\LaravelSession,

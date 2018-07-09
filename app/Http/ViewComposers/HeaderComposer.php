@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\ViewComposers;
+namespace Framework\Http\ViewComposers;
 
 use Illuminate\ {
     View\View,

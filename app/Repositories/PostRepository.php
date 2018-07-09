@@ -1,27 +1,27 @@
 <?php
 
-namespace App\Repositories;
+namespace Framework\Repositories;
 
-use App\Models\ {
+use Framework\Models\ {
     Post,
     Tag,
     Comment
 };
-use App\Services\Thumb;
+use Framework\Services\Thumb;
 
 class PostRepository
 {
     /**
      * The Tag instance.
      *
-     * @var \App\Models\Tag
+     * @var \Framework\Models\Tag
      */
     protected $tag;
 
     /**
      * The Comment instance.
      *
-     * @var \App\Models\Comment
+     * @var \Framework\Models\Comment
      */
     protected $comment;
 
@@ -36,9 +36,9 @@ class PostRepository
     /**
      * Create a new BlogRepository instance.
      *
-     * @param  \App\Models\Post $post
-     * @param  \App\Models\Tag $tag
-     * @param  \App\Models\Comment $comment
+     * @param  \Framework\Models\Post $post
+     * @param  \Framework\Models\Tag $tag
+     * @param  \Framework\Models\Comment $comment
      */
     public function __construct(Post $post, Tag $tag, Comment $comment)
     {
@@ -204,8 +204,8 @@ class PostRepository
     /**
      * Update post.
      *
-     * @param  \App\Models\Post  $post
-     * @param  \App\Http\Requests\PostRequest  $request
+     * @param  \Framework\Models\Post  $post
+     * @param  \Framework\Http\Requests\PostRequest  $request
      * @return void
      */
     public function update($post, $request)
@@ -220,7 +220,7 @@ class PostRepository
     /**
      * Store post.
      *
-     * @param  \App\Http\Requests\PostRequest  $request
+     * @param  \Framework\Http\Requests\PostRequest  $request
      * @return void
      */
     public function store($request)
@@ -237,8 +237,8 @@ class PostRepository
     /**
      * Save categories and tags.
      *
-     * @param  \App\Models\Post  $post
-     * @param  \App\Http\Requests\PostRequest  $request
+     * @param  \Framework\Models\Post  $post
+     * @param  \Framework\Http\Requests\PostRequest  $request
      * @return void
      */
     protected function saveCategoriesAndTags($post, $request)

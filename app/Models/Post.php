@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace Framework\Models;
 
-use App\Events\ PostUpdated;
-use App\Events\ ModelCreated;
+use Framework\Events\ PostUpdated;
+use Framework\Events\ ModelCreated;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model

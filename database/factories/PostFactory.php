@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\Post::class, function (Faker $faker) {
+$factory->define(Framework\Models\Post::class, function (Faker $faker) {
 
     return [
         'meta_description' => $faker->sentence($nbWords = 6, $variableNbWords = true),

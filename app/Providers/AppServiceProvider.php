@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Providers;
+namespace Framework\Providers;
 
 use Zenaton\Client;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use App\Http\ViewComposers\MenuComposer;
-use App\Http\ViewComposers\HeaderComposer;
+use Framework\Http\ViewComposers\MenuComposer;
+use Framework\Http\ViewComposers\HeaderComposer;
 
 class AppServiceProvider extends ServiceProvider
 {

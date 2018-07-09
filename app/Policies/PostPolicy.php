@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Policies;
+namespace Framework\Policies;
 
-use App\Models\ {User, Post};
+use Framework\Models\ {User, Post};
 
 class PostPolicy extends Policy
 {
     /**
      * Determine whether the user can manage the post.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Post  $post
+     * @param  \Framework\Models\User  $user
+     * @param  \Framework\Models\Post  $post
      * @return mixed
      */
     public function manage(User $user, Post $post)

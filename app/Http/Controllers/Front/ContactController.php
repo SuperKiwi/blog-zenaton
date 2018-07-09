@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace Framework\Http\Controllers\Front;
 
-use App\ {
+use Framework\ {
     Http\Controllers\Controller,
     Http\Requests\ContactRequest,
     Models\Contact

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace Framework\Repositories;
 
-use App\Models\Contact;
+use Framework\Models\Contact;
 
 class ContactRepository
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Zenaton\Tasks;
+namespace Framework\Zenaton\Tasks;
 
 use Zenaton\Traits\Zenatonable;
-use App\Notifications\PostAccepted;
+use Framework\Notifications\PostAccepted;
 use Zenaton\Interfaces\TaskInterface;
 
 class AcceptPostTask implements TaskInterface

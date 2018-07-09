@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace Framework\Repositories;
 
-use App\Models\ {
+use Framework\Models\ {
     Comment,
     Post
 };
@@ -36,7 +36,7 @@ class CommentRepository
     /**
      * Get next post comments.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \Framework\Models\Post  $post
      * @param  integer  $page
      * @return \Illuminate\Database\Eloquent\Collection
      */

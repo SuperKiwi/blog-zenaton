@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Policies;
+namespace Framework\Policies;
 
-use App\Models\User;
+use Framework\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class Policy
@@ -12,7 +12,7 @@ class Policy
     /**
      * Grant all abilities to administrator.
      *
-     * @param  \App\Models\User  $user
+     * @param  \Framework\Models\User  $user
      * @return bool
      */
     public function before(User $user)

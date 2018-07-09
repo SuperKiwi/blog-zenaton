@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Framework\Http\Requests;
 
 class ContactRequest extends Request
 {

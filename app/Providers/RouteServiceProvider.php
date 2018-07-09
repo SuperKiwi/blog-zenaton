@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Providers;
+namespace Framework\Providers;
 
-use App\Models\Category;
+use Framework\Models\Category;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use App\Models\User;
-use App\Models\Post;
+use Framework\Models\User;
+use Framework\Models\Post;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'Framework\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

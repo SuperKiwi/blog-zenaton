@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
-use App\ {
+use Framework\ {
     Http\Controllers\Controller,
     Http\Requests\SettingsRequest,
     Repositories\ConfigAppRepository,
@@ -76,9 +76,9 @@ class AdminController extends Controller
     /**
      * Update settings
      *
-     * @param \App\Http\Requests\SettingsRequest $request
-     * @param \App\Repositories\ConfigAppRepository $appRepository
-     * @param \App\Repositories\EnvRepository $envRepository
+     * @param \Framework\Http\Requests\SettingsRequest $request
+     * @param \Framework\Repositories\ConfigAppRepository $appRepository
+     * @param \Framework\Repositories\EnvRepository $envRepository
      * @return \Illuminate\Http\RedirectResponse
      * @internal param ConfigAppRepository $repository
      */

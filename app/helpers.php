@@ -17,7 +17,7 @@ if (!function_exists('currentRouteBootstrap')) {
 if (!function_exists('user')) {
     function user($id)
     {
-        return \App\Models\User::findOrFail($id);
+        return \Framework\Models\User::findOrFail($id);
     }
 }
 
@@ -60,7 +60,7 @@ if (!function_exists('setTabActive')) {
 if (!function_exists('thumb')) {
     function thumb($url)
     {
-        return \App\Services\Thumb::makeThumbPath ($url);
+        return \Framework\Services\Thumb::makeThumbPath ($url);
     }
 }
 

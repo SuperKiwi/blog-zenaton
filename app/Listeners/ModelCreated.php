@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Listeners;
+namespace Framework\Listeners;
 
-use App\Models\Ingoing;
-use App\Services\Thumb;
-use App\Events\ModelCreated as EventModelCreated;
-use App\Zenaton\Workflows\PostModerationWorkflow;
+use Framework\Models\Ingoing;
+use Framework\Services\Thumb;
+use Framework\Events\ModelCreated as EventModelCreated;
+use Framework\Zenaton\Workflows\PostModerationWorkflow;
 
 class ModelCreated
 {

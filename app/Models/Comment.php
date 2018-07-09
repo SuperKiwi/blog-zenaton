@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace Framework\Models;
 
-use App\Events\ModelCreated;
+use Framework\Events\ModelCreated;
 use Baum\Node;
 
 class Comment extends Node

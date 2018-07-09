@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Post;
-use App\Models\Comment;
-use App\Models\User;
-use App\Models\Contact;
+use Framework\Models\Post;
+use Framework\Models\Comment;
+use Framework\Models\User;
+use Framework\Models\Contact;
 
 class DatabaseSeeder extends Seeder
 {

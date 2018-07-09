@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Notifications;
+namespace Framework\Notifications;
 
-use App\Models\Post;
+use Framework\Models\Post;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;

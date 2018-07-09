@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Framework\Http\Requests;
 
-use App\Models\Comment;
+use Framework\Models\Comment;
 
 class CommentRequest extends Request
 {

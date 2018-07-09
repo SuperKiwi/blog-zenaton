@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services;
+namespace Framework\Services;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use App\Models\Post;
+use Framework\Models\Post;
 use Intervention\Image\Facades\Image;
 
 

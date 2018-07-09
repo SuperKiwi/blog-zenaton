@@ -1,22 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace Framework\Http\Controllers\Front;
 
-use App\ {
-    Http\Controllers\Controller,
-    Http\Requests\SearchRequest,
-    Repositories\PostRepository,
-    Models\Tag,
-    Models\Category
-};
+use Framework\ Models\Tag;
+use Framework\ Models\Category;
 use Illuminate\Http\Request;
+use Framework\ Http\Controllers\Controller;
+use Framework\ Http\Requests\SearchRequest;
+use Framework\ Repositories\PostRepository;
 
 class PostController extends Controller
 {
     /**
      * The PostRepository instance.
      *
-     * @var \App\Repositories\PostRepository
+     * @var \Framework\Repositories\PostRepository
      */
     protected $postRepository;
 
@@ -30,7 +28,7 @@ class PostController extends Controller
     /**
      * Create a new PostController instance.
      *
-     * @param  \App\Repositories\PostRepository $postRepository
+     * @param  \Framework\Repositories\PostRepository $postRepository
      * @return void
     */
     public function __construct(PostRepository $postRepository)
@@ -54,7 +52,7 @@ class PostController extends Controller
     /**
      * Display a listing of the posts for the specified category.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \Framework\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function category(Category $category)
@@ -82,7 +80,7 @@ class PostController extends Controller
     /**
      * Get posts for specified tag
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \Framework\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
     public function tag(Tag $tag)
@@ -96,7 +94,7 @@ class PostController extends Controller
     /**
      * Get posts with search
      *
-     * @param  \App\Http\Requests\SearchRequest $request
+     * @param  \Framework\Http\Requests\SearchRequest $request
      * @return \Illuminate\Http\Response
      */
     public function search(SearchRequest $request)

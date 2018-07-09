@@ -4,7 +4,7 @@ namespace Tests\Browser;
 
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
-use App\Models\User;
+use Framework\Models\User;
 use DB;
 use Illuminate\Support\Str;
 

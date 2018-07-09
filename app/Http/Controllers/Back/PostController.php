@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
-use App\ Models\Post;
-use App\ Models\Category;
-use App\ Http\Requests\PostRequest;
-use App\ Http\Controllers\Controller;
-use App\ Repositories\PostRepository;
-use App\Zenaton\Events\PostModeratedEvent;
-use App\Zenaton\Workflows\PostModerationWorkflow;
+use Framework\ Models\Post;
+use Framework\ Models\Category;
+use Framework\ Http\Requests\PostRequest;
+use Framework\ Http\Controllers\Controller;
+use Framework\ Repositories\PostRepository;
+use Framework\Zenaton\Events\PostModeratedEvent;
+use Framework\Zenaton\Workflows\PostModerationWorkflow;
 
 class PostController extends Controller
 {
@@ -17,7 +17,7 @@ class PostController extends Controller
     /**
      * Create a new PostController instance.
      *
-     * @param  \App\Repositories\PostRepository $repository
+     * @param  \Framework\Repositories\PostRepository $repository
      */
     public function __construct(PostRepository $repository)
     {
@@ -29,7 +29,7 @@ class PostController extends Controller
     /**
      * Update "new" field for post.
      *
-     * @param  \App\Models\Post $post
+     * @param  \Framework\Models\Post $post
      * @return \Illuminate\Http\Response
      */
     public function updateSeen(Post $post)
@@ -42,7 +42,7 @@ class PostController extends Controller
     /**
      * Update "active" field for post.
      *
-     * @param  \App\Models\Post $post
+     * @param  \Framework\Models\Post $post
      * @param  bool $status
      * @return \Illuminate\Http\Response
      */
@@ -69,7 +69,7 @@ class PostController extends Controller
     /**
      * Store a newly created post in storage.
      *
-     * @param  \App\Http\Requests\PostRequest  $request
+     * @param  \Framework\Http\Requests\PostRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(PostRequest $request)
@@ -82,7 +82,7 @@ class PostController extends Controller
     /**
      * Display the post.
      *
-     * @param  \App\Models\Post $post
+     * @param  \Framework\Models\Post $post
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
@@ -93,7 +93,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the post.
      *
-     * @param  \App\Models\Post $post
+     * @param  \Framework\Models\Post $post
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
@@ -108,8 +108,8 @@ class PostController extends Controller
     /**
      * Update the post in storage.
      *
-     * @param  \App\Http\Requests\PostRequest  $request
-     * @param  \App\Models\Post $post
+     * @param  \Framework\Http\Requests\PostRequest  $request
+     * @param  \Framework\Models\Post $post
      * @return \Illuminate\Http\Response
      */
     public function update(PostRequest $request, Post $post)

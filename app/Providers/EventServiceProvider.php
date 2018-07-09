@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Framework\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -12,11 +12,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\ModelCreated' => [
-            'App\Listeners\ModelCreated',
+        'Framework\Events\ModelCreated' => [
+            'Framework\Listeners\ModelCreated',
         ],
-        'App\Events\PostUpdated' => [
-            'App\Listeners\PostUpdated',
+        'Framework\Events\PostUpdated' => [
+            'Framework\Listeners\PostUpdated',
         ],
     ];
 

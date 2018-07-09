@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Providers;
+namespace Framework\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use App\Models\Post;
-use App\Policies\PostPolicy;
-use App\Models\Comment;
-use App\Policies\CommentPolicy;
+use Framework\Models\Post;
+use Framework\Policies\PostPolicy;
+use Framework\Models\Comment;
+use Framework\Policies\CommentPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {

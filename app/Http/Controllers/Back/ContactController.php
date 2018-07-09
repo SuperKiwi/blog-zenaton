@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
-use App\ {
+use Framework\ {
     Models\Contact,
     Repositories\ContactRepository,
     Http\Controllers\Controller
@@ -15,7 +15,7 @@ class ContactController extends Controller
     /**
      * Create a new ContactController instance.
      *
-     * @param  \App\Repositories\ContactRepository $repository
+     * @param  \Framework\Repositories\ContactRepository $repository
      */
     public function __construct(ContactRepository $repository)
     {
@@ -27,7 +27,7 @@ class ContactController extends Controller
     /**
      * Update "new" field for contact.
      *
-     * @param  \App\Models\Contact $contact
+     * @param  \Framework\Models\Contact $contact
      * @return \Illuminate\Http\Response
      */
     public function updateSeen(Contact $contact)
@@ -40,7 +40,7 @@ class ContactController extends Controller
     /**
      * Remove contact from storage.
      *
-     * @param  \App\Models\Contact $contact
+     * @param  \Framework\Models\Contact $contact
      * @return \Illuminate\Http\Response
      */
     public function destroy(Contact $contact)

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Framework\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use Framework\Http\Controllers\Controller;
 use Bestmomo\LaravelEmailConfirmation\Traits\ResetsPasswords;
 
 class ResetPasswordController extends Controller

@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Notifications;
+namespace Framework\Notifications;
 
 use Illuminate\Notifications\Notification;
-use App\Models\Post;
+use Framework\Models\Post;
 
 class Commented extends Notification
 {
     /**
      * Post property.
      *
-     * @var \App\Models\Post
+     * @var \Framework\Models\Post
      */
     protected $post;
 

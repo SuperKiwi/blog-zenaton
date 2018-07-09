@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\ViewComposers;
+namespace Framework\Http\ViewComposers;
 
 use Illuminate\View\View;
-use App\Models\Category;
+use Framework\Models\Category;
 
 class MenuComposer
 {

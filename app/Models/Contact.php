@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace Framework\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Events\ModelCreated;
+use Framework\Events\ModelCreated;
 
 class Contact extends Model
 {

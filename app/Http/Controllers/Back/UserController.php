@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
-use App\ {
+use Framework\ {
     Http\Controllers\Controller,
     Http\Requests\UserUpdateRequest,
     Models\User,
@@ -16,7 +16,7 @@ class UserController extends Controller
     /**
      * Create a new UserController instance.
      *
-     * @param  \App\Repositories\UserRepository $repository
+     * @param  \Framework\Repositories\UserRepository $repository
      */
     public function __construct(UserRepository $repository)
     {
@@ -28,7 +28,7 @@ class UserController extends Controller
     /**
      * Update "new" field for user.
      *
-     * @param  \App\Models\User $user
+     * @param  \Framework\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function updateSeen(User $user)
@@ -41,7 +41,7 @@ class UserController extends Controller
     /**
      * Update "valid" field for user.
      *
-     * @param  \App\Models\User $user
+     * @param  \Framework\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function updateValid(User $user)
@@ -55,7 +55,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User $user
+     * @param  \Framework\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
@@ -66,8 +66,8 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UserUpdateRequest $request
-     * @param  \App\Models\User $user
+     * @param  \Framework\Http\Requests\UserUpdateRequest $request
+     * @param  \Framework\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function update(UserUpdateRequest $request, User $user)
@@ -80,7 +80,7 @@ class UserController extends Controller
     /**
      * Remove the user from storage.
      *
-     * @param  \App\Models\User $user
+     * @param  \Framework\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)

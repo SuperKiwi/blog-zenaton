@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\Comment::class, function (Faker $faker) {
+$factory->define(Framework\Models\Comment::class, function (Faker $faker) {
 
     return [
         'body' => $faker->paragraph($nbSentences = 4, $variableNbSentences = true),

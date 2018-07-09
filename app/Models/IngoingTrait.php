@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace Framework\Models;
 
-use App\Models\Ingoing;
+use Framework\Models\Ingoing;
 
 trait IngoingTrait
 {

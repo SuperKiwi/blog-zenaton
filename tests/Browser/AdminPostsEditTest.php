@@ -2,7 +2,7 @@
 
 namespace Tests\Browser;
 
-use App\Models\User;
+use Framework\Models\User;
 use Facebook\WebDriver\WebDriverBy;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;

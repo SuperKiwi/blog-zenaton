@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace Framework\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Notifications\ResetPassword as ResetPasswordNotification;
-use App\Events\ModelCreated;
+use Framework\Notifications\ResetPassword as ResetPasswordNotification;
+use Framework\Events\ModelCreated;
 use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable

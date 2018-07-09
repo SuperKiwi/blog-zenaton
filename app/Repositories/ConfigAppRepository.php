@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace Framework\Repositories;
 
 class ConfigAppRepository
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
-use App\Services\Thumb;
+use Framework\Services\Thumb;
 
 trait Indexable
 {
     /**
      * The PostRepository instance.
      *
-     * @var \App\Repositories\PostRepository
+     * @var \Framework\Repositories\PostRepository
      */
     protected $repository;
 

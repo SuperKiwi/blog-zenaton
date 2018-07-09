@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Zenaton\Tasks;
+namespace Framework\Zenaton\Tasks;
 
 use Notification;
-use App\Models\User;
+use Framework\Models\User;
 use Zenaton\Traits\Zenatonable;
 use Zenaton\Interfaces\TaskInterface;
-use App\Notifications\NewPostNeedsModeration;
+use Framework\Notifications\NewPostNeedsModeration;
 
 class AskForModerationTask implements TaskInterface
 {

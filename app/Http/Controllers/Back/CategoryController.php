@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
-use App\ {
+use Framework\ {
     Http\Controllers\Controller,
     Http\Requests\CategoryRequest,
     Models\Category
@@ -37,7 +37,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created categorie in storage.
      *
-     * @param  \App\Http\Requests\CategoryRequest  $request
+     * @param  \Framework\Http\Requests\CategoryRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(CategoryRequest $request)
@@ -50,7 +50,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified categorie.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \Framework\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function edit(Category $category)
@@ -61,8 +61,8 @@ class CategoryController extends Controller
     /**
      * Update the specified categorie in storage.
      *
-     * @param  \App\Http\Requests\CategoryRequest  $request
-     * @param  \App\Models\Category  $category
+     * @param  \Framework\Http\Requests\CategoryRequest  $request
+     * @param  \Framework\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function update(CategoryRequest $request, Category $category)
@@ -75,7 +75,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified categorie from storage.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \Framework\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function destroy(Category $category)

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Zenaton\Events;
+namespace Framework\Zenaton\Events;
 
 use Zenaton\Interfaces\EventInterface;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Listeners;
+namespace Framework\Listeners;
 
-use App\Events\PostUpdated as EventPostUpdated;
-use App\Services\Thumb;
+use Framework\Events\PostUpdated as EventPostUpdated;
+use Framework\Services\Thumb;
 
 class PostUpdated
 {

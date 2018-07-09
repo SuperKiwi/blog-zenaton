@@ -36,7 +36,7 @@
                         </ul>
                         <div class="tab-content">
 
-                            @inject('envRepository', 'App\Repositories\EnvRepository')
+                            @inject('envRepository', 'Framework\Repositories\EnvRepository')
 
                             <div class="tab-pane fade" id="tab_1">
                                 <form method="post" action="{{ route('settings.update', ['page' => 1]) }}">

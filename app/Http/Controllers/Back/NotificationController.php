@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
-use App\ {
+use Framework\ {
     Models\User,
     Http\Controllers\Controller
 };
@@ -16,7 +16,7 @@ class NotificationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \Framework\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function index(User $user)

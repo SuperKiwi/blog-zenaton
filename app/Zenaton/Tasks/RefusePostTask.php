@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Zenaton\Tasks;
+namespace Framework\Zenaton\Tasks;
 
 use Zenaton\Traits\Zenatonable;
-use App\Notifications\PostRefused;
+use Framework\Notifications\PostRefused;
 use Zenaton\Interfaces\TaskInterface;
 
 class RefusePostTask implements TaskInterface

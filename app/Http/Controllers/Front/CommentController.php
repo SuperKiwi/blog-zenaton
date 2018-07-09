@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace Framework\Http\Controllers\Front;
 
-use App\ {
+use Framework\ {
     Http\Controllers\Controller,
     Http\Requests\CommentRequest,
     Repositories\CommentRepository,
@@ -16,7 +16,7 @@ class CommentController extends Controller
     /**
      * Create a new CommentController instance.
      *
-     * @param  \App\Repositories\CommentRepository $commentRepository
+     * @param  \Framework\Repositories\CommentRepository $commentRepository
      */
     public function __construct(CommentRepository $commentRepository)
     {
@@ -28,8 +28,8 @@ class CommentController extends Controller
     /**
      * Store a newly created comment in storage.
      *
-     * @param  \App\http\requests\CommentRequest $request
-     * @param  \App\Models\Post  $post
+     * @param  \Framework\http\requests\CommentRequest $request
+     * @param  \Framework\Models\Post  $post
      * @param  integer $comment_id
      * @return \Illuminate\Http\Response
      */
@@ -58,8 +58,8 @@ class CommentController extends Controller
     /**
      * Update the specified comment in storage.
      *
-     * @param  \App\Http\requests\CommentRequest $request
-     * @param  \App\Models\Comment  $comment
+     * @param  \Framework\Http\requests\CommentRequest $request
+     * @param  \Framework\Models\Comment  $comment
      * @return array
      */
     public function update(CommentRequest $request, Comment $comment)
@@ -90,7 +90,7 @@ class CommentController extends Controller
     /**
      * Get the next comments for the specified post.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \Framework\Models\Post  $post
      * @param  integer $page
      * @return array
      */

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace Framework\Repositories;
 
-use App\Models\User;
+use Framework\Models\User;
 
 class UserRepository
 {
@@ -31,8 +31,8 @@ class UserRepository
     /**
      * Update a user.
      *
-     * @param  \App\Http\Requests\UserUpdateRequest $request
-     * @param  \App\Models\User $user
+     * @param  \Framework\Http\Requests\UserUpdateRequest $request
+     * @param  \Framework\Models\User $user
      * @return void
      */
     public function update($request, $user)

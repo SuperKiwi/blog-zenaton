@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace Framework\Http\Controllers\Back;
 
-use App\ {
+use Framework\ {
     Models\Comment,
     Repositories\CommentRepository,
     Http\Controllers\Controller
@@ -15,7 +15,7 @@ class CommentController extends Controller
     /**
      * Create a new CommentController instance.
      *
-     * @param  \App\Repositories\CommentRepository $repository
+     * @param  \Framework\Repositories\CommentRepository $repository
      */
     public function __construct(CommentRepository $repository)
     {
@@ -27,7 +27,7 @@ class CommentController extends Controller
     /**
      * Update "new" field for comment.
      *
-     * @param  \App\Models\Comment $comment
+     * @param  \Framework\Models\Comment $comment
      * @return \Illuminate\Http\Response
      */
     public function updateSeen(Comment $comment)
@@ -40,7 +40,7 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Comment $comment
+     * @param  \Framework\Models\Comment $comment
      * @return \Illuminate\Http\Response
      */
     public function destroy(Comment $comment)
