@@ -37,17 +37,6 @@ class PostController extends Controller
         $this->nbrPages = config('app.nbrPages.front.posts');
     }
 
-    /**
-     * Display a listing of the posts.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $posts = $this->postRepository->getActiveOrderByDate($this->nbrPages);
-
-        return view('front.index', compact('posts'));
-    }
 
     /**
      * Display a listing of the posts for the specified category.

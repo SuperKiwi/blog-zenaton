@@ -1,4 +1,4 @@
-@extends('front.layout')
+@extends('web::layout')
 
 @section('main')
 
@@ -7,7 +7,7 @@
     <section id="bricks">
 
         <div class="row masonry">
-            @isset($info)
+            {{-- @isset($info)
                 @component('front.components.alert')
                     @slot('type')
                         info
@@ -22,7 +22,7 @@
                     @endslot
                     {{ $errors->first('search') }}
                 @endcomponent
-            @endif  
+            @endif   --}}
             <!-- brick-wrapper -->
             <div class="bricks-wrapper">
 
@@ -40,7 +40,7 @@
 
         <div class="row">
 
-            {{ $posts->links('front.pagination') }}
+            {{-- {{ $posts->links('front.pagination') }} --}}
 
         </div>
     </section> <!-- end bricks -->
