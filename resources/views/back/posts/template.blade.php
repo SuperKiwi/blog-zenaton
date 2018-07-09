@@ -116,15 +116,6 @@
                             'required' => true,
                         ],
                     ])
-                    @include('back.partials.input', [
-                        'input' => [
-                            'name' => 'active',
-                            'value' => isset($post) ? $post->active : false,
-                            'input' => 'checkbox',
-                            'title' => __('Status'),
-                            'label' => __('Active'),
-                        ],
-                    ])
                 @endcomponent
 
                 @component('back.components.box')
