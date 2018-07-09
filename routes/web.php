@@ -85,6 +85,10 @@ Route::prefix('admin')->namespace('Back')->group(function () {
             'index', 'destroy'
         ]]);
 
+        // Posts
+        Route::name('posts.accept')->post('posts/accept/{post}', 'PostController@accept');
+        Route::name('posts.refuse')->post('posts/refuse/{post}', 'PostController@refuse');
+
         // Comments
         Route::name('comments.seen')->put('comments/seen/{comment}', 'CommentController@updateSeen');
         Route::resource('comments', 'CommentController', ['only' => [

@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
+use App\Events\ PostUpdated;
+use App\Events\ ModelCreated;
 use Illuminate\Database\Eloquent\Model;
-use App\Events\ {
-    ModelCreated,
-    PostUpdated
-};
 
 class Post extends Model
 {
@@ -22,13 +20,18 @@ class Post extends Model
         'updated' => PostUpdated::class,
     ];
 
+    protected $casts = [
+        'premium' => 'active',
+        'premium' => 'moderated'
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'title', 'slug', 'seo_title', 'excerpt', 'body', 'meta_description', 'meta_keywords', 'active', 'image', 'user_id'
+        'title', 'slug', 'seo_title', 'excerpt', 'body', 'meta_description', 'meta_keywords', 'active', 'image', 'user_id', 'moderated'
     ];
 
     /**

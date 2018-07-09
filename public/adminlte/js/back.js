@@ -33,6 +33,20 @@ var back = (function () {
         })
     }
 
+    var moderate = function (event, that, url, swalTitle, confirmButtonText, cancelButtonText, errorAjax) {
+        event.preventDefault()
+        swal({
+            title: swalTitle,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: confirmButtonText,
+            cancelButtonText: cancelButtonText
+        }).then(function () {
+            ajax(that.attr('href'), 'POST', url, errorAjax)
+        })
+    }
+
     var seen = function (url, that, errorAjax) {
         var urlSeen = url + '/seen/' + that.val()
         // If "new" is checked we must reload the page
@@ -160,7 +174,8 @@ var back = (function () {
         ordering: ordering,
         filters: filters,
         spin: spin,
-        unSpin: unSpin
+        unSpin: unSpin,
+        moderate: moderate
     }
 
 })()

@@ -33,11 +33,17 @@
                             <th>@lang('Image')</th>
                             <th>@lang('Active')<span id="active" class="fa fa-sort pull-right"
                                                               aria-hidden="true"></span></th>
+                            <th>@lang('Moderated')<span id="moderated" class="fa fa-sort pull-right"
+                                                              aria-hidden="true"></span></th>
                             <th>@lang('Creation')<span id="created_at" class="fa fa-sort-desc pull-right"
                                                               aria-hidden="true"></span></th>
                             <th>@lang('New')</th>
                             <th>@lang('SEO Title')<span id="seo_title" class="fa fa-sort pull-right"
                                                               aria-hidden="true"></span></th>
+                            
+                            @admin
+                                <th></th>
+                            @endadmin
                             <th></th>
                             <th></th>
                             <th></th>
@@ -106,6 +112,12 @@
                     })
                     .on('click', 'td a.btn-danger', function (event) {
                         back.destroy(event, $(this), url, swalTitle, confirmButtonText, cancelButtonText, errorAjax)
+                    })
+                    .on('click', 'td a.accept', function (event) {
+                        back.moderate(event, $(this), url, '@lang('Validate post ?')', confirmButtonText, cancelButtonText, errorAjax)
+                    })
+                    .on('click', 'td a.refuse', function (event) {
+                        back.moderate(event, $(this), url, '@lang('Reject post ?')', confirmButtonText, cancelButtonText, errorAjax)
                     })
                 $('th span').click(function () {
                     back.ordering(url, $(this), errorAjax)

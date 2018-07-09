@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers\Back;
 
-use App\ {
-    Http\Requests\PostRequest,
-    Http\Controllers\Controller,
-    Models\Category,
-    Models\Post,
-    Repositories\PostRepository
-};
+use App\ Models\Post;
+use App\ Models\Category;
+use App\ Http\Requests\PostRequest;
+use App\ Http\Controllers\Controller;
+use App\ Repositories\PostRepository;
 
 class PostController extends Controller
 {
@@ -34,9 +32,9 @@ class PostController extends Controller
      */
     public function updateSeen(Post $post)
     {
-        $post->ingoing->delete ();
+        $post->ingoing->delete();
 
-        return response ()->json ();
+        return response()->json();
     }
 
     /**
@@ -51,7 +49,7 @@ class PostController extends Controller
         $post->active = $status;
         $post->save();
 
-        return response ()->json ();
+        return response()->json();
     }
 
     /**
@@ -131,8 +129,29 @@ class PostController extends Controller
     {
         $this->authorize('manage', $post);
 
-        $post->delete ();
+        $post->delete();
 
-        return response ()->json ();
+        return response()->json();
+    }
+
+    public function accept(Post $post)
+    {
+        $this->moderate($post, true);
+
+        redirect(route('posts.index'))->with('post-ok', __('The post has been successfully accepted'));
+    }
+
+    public function refuse(Post $post)
+    {
+        $this->moderate($post, false);
+
+        redirect(route('posts.index'))->with('post-ok', __('The post has been successfully refused'));
+    }
+
+    protected function moderate(Post $post, bool $accept)
+    {
+        $post->moderated = true;
+        $post->active = $accept;
+        $post->save();
     }
 }
