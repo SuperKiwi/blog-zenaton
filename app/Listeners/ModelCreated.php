@@ -32,6 +32,10 @@ class ModelCreated
     public function postCreated($post)
     {
         if ($post->user->role == 'admin') {
+            $post->moderated = true;
+            $post->active = true;
+            $post->save();
+
             return;
         }
 
