@@ -2,11 +2,8 @@
 
 namespace App\Listeners;
 
-use Notification;
-use App\Models\User;
 use App\Models\Ingoing;
 use App\Services\Thumb;
-use App\Notifications\NewPostNeedsModeration;
 use App\Events\ModelCreated as EventModelCreated;
 use App\Zenaton\Workflows\PostModerationWorkflow;
 
@@ -38,10 +35,6 @@ class ModelCreated
 
             return;
         }
-
-        $adminUsers = User::whereRole('admin')->get();
-
-        Notification::send($adminUsers, new NewPostNeedsModeration($post));
 
         (new PostModerationWorkflow($post))->dispatch();
     }

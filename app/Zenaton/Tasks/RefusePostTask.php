@@ -3,10 +3,10 @@
 namespace App\Zenaton\Tasks;
 
 use Zenaton\Traits\Zenatonable;
-use App\Notifications\PostAccepted;
+use App\Notifications\PostRefused;
 use Zenaton\Interfaces\TaskInterface;
 
-class AcceptPostDueToNoModerationTask implements TaskInterface
+class RefusePostTask implements TaskInterface
 {
     use Zenatonable;
 
@@ -19,9 +19,6 @@ class AcceptPostDueToNoModerationTask implements TaskInterface
 
     public function handle()
     {
-        $this->post->active = true;
-        $this->post->save();
-
-        $this->post->user->notify(new PostAccepted($this->post, false));
+        $this->post->user->notify(new PostRefused($this->post));
     }
 }

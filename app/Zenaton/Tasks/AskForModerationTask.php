@@ -2,11 +2,12 @@
 
 namespace App\Zenaton\Tasks;
 
+use Notification;
+use App\Models\User;
 use Zenaton\Traits\Zenatonable;
-use App\Notifications\PostAccepted;
 use Zenaton\Interfaces\TaskInterface;
 
-class AcceptPostDueToNoModerationTask implements TaskInterface
+class AskForModerationTask implements TaskInterface
 {
     use Zenatonable;
 
@@ -19,9 +20,8 @@ class AcceptPostDueToNoModerationTask implements TaskInterface
 
     public function handle()
     {
-        $this->post->active = true;
-        $this->post->save();
+        $adminUsers = User::whereRole('admin')->get();
 
-        $this->post->user->notify(new PostAccepted($this->post, false));
+        Notification::send($adminUsers, new NewPostNeedsModeration($this->post));
     }
 }
