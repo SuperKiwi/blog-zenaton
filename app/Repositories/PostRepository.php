@@ -227,6 +227,7 @@ class PostRepository
     {
         $request->merge(['user_id' => auth()->id()]);
         $request->merge(['active' => $request->has('active')]);
+        $request->merge(['image' => '/files' . $request->image]);
 
         $post = Post::create($request->all());
 

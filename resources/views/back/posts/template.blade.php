@@ -220,8 +220,8 @@
         })
 
         function processSelectedFile(filePath, requestingField) {
-            $('#' + requestingField).val('\\' + filePath)
-            $('#img').attr('src', '\\' + filePath)
+            $('#' + requestingField).val('\/' + filePath)
+            $('#img').attr('src', '\/' + filePath)
         }
 
         $('#slug').keyup(function () {
