@@ -8,6 +8,7 @@ use App\Models\Ingoing;
 use App\Services\Thumb;
 use App\Notifications\NewPostNeedsModeration;
 use App\Events\ModelCreated as EventModelCreated;
+use App\Zenaton\Workflows\PostModerationWorkflow;
 
 class ModelCreated
 {
@@ -37,5 +38,7 @@ class ModelCreated
         $adminUsers = User::whereRole('admin')->get();
 
         Notification::send($adminUsers, new NewPostNeedsModeration($post));
+
+        (new PostModerationWorkflow($post))->dispatch();
     }
 }

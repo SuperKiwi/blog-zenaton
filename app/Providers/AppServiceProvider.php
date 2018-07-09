@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Zenaton\Client;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -36,6 +37,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::if('request', function ($url) {
             return request()->is($url);
         });
+
+        Client::init(env('ZENATON_APP_ID'), env('ZENATON_API_TOKEN'), env('ZENATON_APP_ENV'));
     }
 
     /**

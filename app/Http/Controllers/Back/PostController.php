@@ -7,6 +7,8 @@ use App\ Models\Category;
 use App\ Http\Requests\PostRequest;
 use App\ Http\Controllers\Controller;
 use App\ Repositories\PostRepository;
+use App\Zenaton\Events\PostModeratedEvent;
+use App\Zenaton\Workflows\PostModerationWorkflow;
 
 class PostController extends Controller
 {
@@ -153,5 +155,8 @@ class PostController extends Controller
         $post->moderated = true;
         $post->active = $accept;
         $post->save();
+
+        $event = new PostModeratedEvent($accept);
+        PostModerationWorkflow::whereId($post->id)->send($event);
     }
 }
