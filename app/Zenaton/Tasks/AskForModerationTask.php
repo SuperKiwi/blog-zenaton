@@ -6,6 +6,7 @@ use Notification;
 use App\Models\User;
 use Zenaton\Traits\Zenatonable;
 use Zenaton\Interfaces\TaskInterface;
+use App\Notifications\NewPostNeedsModeration;
 
 class AskForModerationTask implements TaskInterface
 {
