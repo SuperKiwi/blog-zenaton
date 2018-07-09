@@ -43,6 +43,7 @@ Route::name('category')->get('category/{category}', 'Front\PostController@catego
 // Authentification
 Auth::routes();
 
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->middleware('admin');
 
 /*
 |--------------------------------------------------------------------------
@@ -51,9 +52,7 @@ Auth::routes();
 */
 
 Route::prefix('admin')->namespace('Back')->group(function () {
-
     Route::middleware('redac')->group(function () {
-
         Route::name('admin')->get('/', 'AdminController@index');
 
         // Posts
@@ -67,11 +66,9 @@ Route::prefix('admin')->namespace('Back')->group(function () {
 
         // Medias
         Route::view('medias', 'back.medias')->name('medias.index');
-
     });
 
     Route::middleware('admin')->group(function () {
-
         // Users
         Route::name('users.seen')->put('users/seen/{user}', 'UserController@updateSeen');
         Route::name('users.valid')->put('users/valid/{user}', 'UserController@updateValid');
@@ -97,7 +94,5 @@ Route::prefix('admin')->namespace('Back')->group(function () {
         // Settings
         Route::name('settings.edit')->get('settings', 'AdminController@settingsEdit');
         Route::name('settings.update')->put('settings', 'AdminController@settingsUpdate');
-
     });
-
 });
